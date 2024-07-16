@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Website Personal portfolio">
+    <meta name="Keyword" content="html, css, javascript and framework tailwindcss">
+    <meta name="Author" content="Aldo">
+    <title>个人作品集</title>
+    <!-- connector link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body id="Home" class="transition-colors duration-300 bg-gray-100 dark:bg-gray-800 dark:text-white">
+
+<!-- Navigasi menu bar -->
+<nav class="bg-white shadow-lg dark:bg-gray-900">
+    <div class="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <a href="#" class="mr-auto text-xl font-bold" data-lang="title"> <span class="navbar-title">Personal Branding</span></a>
+            </div>
+            
+            <div class="flex items-center">
+                <button id="themeToggle" class="mr-4 text-gray-800 dark:text-gray-100 focus:outline-none">
+                    <i id="themeIcon" class="bi bi-moon"></i>
+                </button>
+                <button id="lang-toggle" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white">EN/ID</button>
+            </div>
+
+            <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="flex space-x-4">
+                    <a href="#about" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="about">About</a>
+                    <a href="#blog" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="blog">Blog Personal</a>
+                    <a href="#experience" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="experience">Experience</a>
+                    <a href="#project" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="project">Project</a>
+                    <a href="#skill" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="skill">Skill</a>
+                    <a href="#certificate" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="certificate">Certificate</a>
+                    <a href="#contact" class="px-3 py-2 text-sm font-medium text-gray-900 rounded-md dark:text-white hover:bg-gray-700 hover:text-white" data-lang="contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="flex sm:hidden">
+                <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- icon menu mode mobile -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="hidden sm:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="about">About</a>
+            <a href="#blog" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="blog">Blog Personal</a>
+            <a href="#experience" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="experience">Experience</a>
+            <a href="#project" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="project">Project</a>
+            <a href="#skill" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="skill">Skill</a>
+            <a href="#certificate" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="certificate">Certificate</a>
+            <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:bg-gray-700 hover:text-white" data-lang="contact">Contact</a>
+        </div>
+    </div>
+</nav>
+<div id="darkModeOverlay" class="dark-mode-active"></div>
+
+<!-- section About -->
+<section id="about" class="py-12">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center justify-center space-x-0 md:flex-row md:space-x-12">
+            <div class="max-w-md">
+                <img src="img/studio1.jpg" alt="Profile Picture" class="w-64 mx-auto mb-6 rounded-full shadow-lg">
+            </div>
+            <div class="max-w-lg text-center md:text-left">
+                <h2 class="mb-4 text-4xl font-bold text-gray-800 dark:text-white" data-lang="sectionAbout1">About Me</h2>
+                <!-- text run Logic Code Java Script -->
+                <p class="text-gray-600 my-2.5 font-semibold" data-lang="sectionAbout2">
+                    <span id="txt-run"></span>
+                </p>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                <script>
+                    var typed = new Typed("#txt-run", {
+                        strings: [
+                            "Hello! My name is Aldo. I am a Software Engineer, more specifically in the field of WEB developer. Currently I am still studying at one of the universities in Cirebon city majoring in IT. I have had a passion for WEB Developer since I first became acquainted with digital development. In my opinion, this is very interesting to study now and in the future."
+                        ],
+                        typeSpeed: 75,
+                        loop: true,
+                        backSpeed: 50,
+                        backDelay: 2000
+                    });
+                </script>
+                
+                <p class="mb-6 text-lg text-gray-700 dark:text-gray-300" data-lang="sectionAbout3">
+                    Let's connect and build something amazing together!
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#contact" class="inline-block px-4 py-2 font-bold text-white transition duration-300 bg-blue-500 rounded-full hover:bg-blue-600" data-lang="sectionAbout4">Contact Me</a>
+                    <a href="path/to/your/CV.pdf" download class="inline-block px-4 py-2 font-bold text-white transition duration-300 bg-green-500 rounded-full hover:bg-green-600 flex items-center" data-lang="sectionAbout5">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v16c0 1.104.896 2 2 2h12c1.104 0 2-.896 2-2V4M12 11v6m0-6l-4 4m4-4l4 4M14 2h-4v2h4V2z"></path></svg>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- section blogpersonal -->
+<section id="blog" class="py-12">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex space-x-4 flex-col items-center justify-center  md:flex-row md:space-x-12 ">
+            <div class="max-w-xs md:order-2 ml-8">
+                <img src="img/BlogIlustration.jpg" alt="Blog Illustration" class="w-full mb-6 transition duration-300 transform hover:scale-105 md:mb-0 ">
+            </div>
+            <div class="max-w-lg text-center md:text-left md:order-1 md:mr-8 w-80">
+                <h2 class="mb-4 text-4xl font-bold text-gray-800 dark:text-white" data-lang="sectionblog1">My Personal Blog</h2>
+                <p class="text-lg leading-relaxed indent-4" id="textContent" >
+                    <span data-lang="sectionblog2">I am an IT student who lives in the city of Cirebon, West Java. I work as a software developer or what is usually called a Software Engineer. I work via WFH (Work From Home) or Remote Work</span>
+                     <span id="dots">...</span><span id="moreText" style="display: none;" data-lang="sectionblog2set">With extensive experience and strong creative abilities, I am always passionate about bringing innovative solutions to every project I work on. Apart from that, I am also an observer of developments in the digital era and enjoy learning new things that I think are interesting to learn. I believe that the best inspiration often comes from diverse life experiences.</span>
+                </p>
+                <button id="toggleTextBtn" class="mt-4 text-blue-500 hover:underline focus:outline-none" data-lang="sectionblog3">Read more</button>
+                <div class="mt-6"></div>
+                <ul class="mb-6 text-left">
+                    <li class="flex items-center space-x-2">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700 dark:text-gray-300" data-lang="sectionblog4">Tips & Tricks for Web Development</span>
+                    </li>
+                    <li class="flex items-center mt-2 space-x-2">
+                        <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m-6 0l3-3m3 7v-4l3-3m-6 0l3 3"></path>
+                        </svg>
+                        <span class="text-gray-700 dark:text-gray-300" data-lang="sectionblog5">Latest Technological Trends</span>
+                    </li>
+                    <li class="flex items-center mt-2 space-x-2">
+                        <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <span class="text-gray-700 dark:text-gray-300" data-lang="sectionblog6">Personal Reflections and Stories</span>
+                    </li>
+                </ul>
+                <p id="ticker" class="overflow-hidden text-lg text-gray-700 dark:text-gray-300 whitespace-nowrap" data-lang="sectionblog7">
+                    <span >Stay tuned for more updates and insights!</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="py-12">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-white" data-lang="Experience1">Experience</h2>
+            <p class="mt-2 text-lg text-gray-600 dark:text-gray-300" data-lang="Experience2">My journey and professional experience.</p>
+        </div>
+        <!-- Timeline of Experience -->
+        <div class="mt-8 grid gap-6 sm:grid-cols-1 md:grid-cols-2">
+            <!-- Timeline Item 1 -->
+            <div class="group flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex flex-col flex-shrink-0 w-24 mr-4">
+                    <span class="text-lg font-semibold text-gray-800 dark:text-white">2021 - 2023</span>
+                    <span class="text-sm text-gray-600 dark:text-gray-300" data-lang="Experience1per1">Current</span>
+                </div>
+                <div class="flex-1 border-l border-gray-300 dark:border-gray-600">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white pl-2" data-lang="Experience1per2">frontend dev at Kedawung Syntax Company</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300 pl-2" data-lang="Experience1per3">Developing scalable web applications using modern technologies.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="group flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex flex-col flex-shrink-0 w-24 mr-4">
+                    <span class="text-lg font-semibold text-gray-800 dark:text-white">2018 - 2021</span>
+                    <span class="text-sm text-gray-600 dark:text-gray-300" data-lang="Experience2per1">Previous</span>
+                </div>
+                <div class="flex-1 border-l border-gray-300 dark:border-gray-600">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white pl-2" data-lang="Experience2per2">Junior Developer at ABC Solutions</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300 pl-2" data-lang="Experience2per3">Started as an intern and progressed to junior developer role.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="group flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex flex-col flex-shrink-0 w-24 mr-4">
+                    <span class="text-lg font-semibold text-gray-800 dark:text-white">2015 - 2018</span>
+                    <span class="text-sm text-gray-600 dark:text-gray-300" data-lang="Experience3per1">Early Career</span>
+                </div>
+                <div class="flex-1 border-l border-gray-300 dark:border-gray-600">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white pl-2" data-lang="Experience3per2">Intern at XYZ Corporation</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300 pl-2" data-lang="Experience3per3">Gained foundational skills and practical experience in software development.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline Item 4 -->
+            <div class="group flex items-center justify-between p-4 bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex flex-col flex-shrink-0 w-24 mr-4">
+                    <span class="text-lg font-semibold text-gray-800 dark:text-white">2023 - 2027</span>
+                    <span class="text-sm text-gray-600 dark:text-gray-300" data-lang="Experience4per1">Early Career</span>
+                </div>
+                <div class="flex-1 border-l border-gray-300 dark:border-gray-600">
+                    <div class="mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800 dark:text-white pl-2" data-lang="Experience4per2">Intern at tokped Corporation</h3>
+                        <p class="mt-2 text-gray-600 dark:text-gray-300 pl-2" data-lang="Experience4per3">Gained foundational skills and practical experience in software development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project -->
+<section id="project" class="py-12 bg-gray-100 dark:bg-gray-900">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-white" data-lang="Project1">Projects</h2>
+            <p class="mt-2 text-lg text-gray-600 dark:text-gray-300" data-lang="Project2">Check out some of my recent projects.</p>
+        </div>
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 gap-6 mt-8 sm:grid-cols-3 lg:grid-cols-3">
+            <!-- Project Card 1 -->
+            <div class="bg-white shadow-md dark:bg-gray-800 rounded-lg overflow-hidden">
+                <img src="img/project/project2.jpg" alt="Project 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white" data-lang="Project1per1">E-commerce Website</h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300" data-lang="Project1per2">Built a responsive e-commerce site using React and Firebase.</p>
+                    <a href="https://githubaldo123.github.io/E-Commerce/" class="block mt-4 text-blue-500 dark:text-blue-400 hover:underline" data-lang="Project1per3">View Project</a>
+                </div>
+            </div>
+            
+            <!-- Project Card 2 -->
+            <div class="bg-white shadow-md dark:bg-gray-800 rounded-lg overflow-hidden">
+                <img src="img/project/project3.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white" data-lang="Project2per1">Portfolio design</h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300" data-lang="Project2per2">Built a responsive e-commerce site using React and Firebase.</p>
+                    <a href="https://githubaldo123.github.io/CafeResto/" class="block mt-4 text-blue-500 dark:text-blue-400 hover:underline" data-lang="Project2per3">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project Card  -->
+            <div class="bg-white shadow-md dark:bg-gray-800 rounded-lg overflow-hidden">
+                <img src="img/project/logoMT.jpg" alt="Project 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white" data-lang="Project2per1">Mutiara Jaya</h3>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300" data-lang="Project2per2">Designed my personal portfolio using Tailwind CSS.</p>
+                    <a href="https://githubaldo123.github.io/MutiaraJaya/" class="block mt-4 text-blue-500 dark:text-blue-400 hover:underline" data-lang="Project2per3">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- section skill -->
+<section id="skill" class="container mx-auto p-6" >
+    <h1 class="text-4xl font-bold mb-6" data-lang="skill1">Skills</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/html.jpg" class="skill-icon mr-4" alt="HTML">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill1per1">HTML</p>
+            <p class="text-sm text-gray-600" data-lang="skill1per2">Markup language for creating web pages.</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/css.jpg" class="skill-icon mr-4" alt="CSS">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill2per1">CSS</p>
+            <p class="text-sm text-gray-600" data-lang="skill2per2">organizes the appearance of elements written in the markup language</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/js.jpg" class="skill-icon mr-4" alt="CSS">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill3per1">JAVA SCRIPT</p>
+            <p class="text-sm text-gray-600" data-lang="skill3per2">development of open source website-based applications to make them more interactive and dynamic</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/c++.jpg" class="skill-icon mr-4" alt="CSS">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill4per1">C++</p>
+            <p class="text-sm text-gray-600" data-lang="skill4per2">OOP (Object Oriented Programming) programming which has data and functions in the same class and object.</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/tailwindcss.jpg" class="skill-icon mr-4" alt="TailwindCSS">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill5per1">TailwindCSS</p>
+            <p class="text-sm text-gray-600" data-lang="skill5per2">Cascading Style Sheet framework which is used to customize or design user interfaces on a web</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/php.jpg" class="skill-icon mr-4" alt="PHP">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill6per1">PHP</p>
+            <p class="text-sm text-gray-600" data-lang="skill6per2">Server-side scripting language for web development.</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/Git.jpg" class="skill-icon mr-4" alt="Git">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill7per1">Git</p>
+            <p class="text-sm text-gray-600" data-lang="skill7per2">Version control system for tracking changes in code.</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/figma.jpg" class="skill-icon mr-4" alt="Figma">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill8per1">Figma</p>
+            <p class="text-sm text-gray-600" data-lang="skill8per2">Design tool for creating user interfaces and prototypes.</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/laravel.jpg" class="skill-icon mr-4" alt="Laravel">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill9per1">Laravel</p>
+            <p class="text-sm text-gray-600" data-lang="skill9per2">PHP framework for building web applications.</p>
+            </div>
+        </div>
+        <div class="skill flex items-center p-4 bg-white shadow-md rounded-md">
+            <img src="img/skill/python.jpg" class="skill-icon mr-4" alt="Python">
+            <div>
+            <p class="font-semibold text-lg" data-lang="skill10per1">Python</p>
+            <p class="text-sm text-gray-600" data-lang="skill10per2">High-level programming language for various applications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- certificate -->
+<section id="certificate" class="skills min-h-screen border-solid border-2 border-back-500">
+    <div class="sertifika border-solid border-2 border-back-500">
+        <div class="flex flex-col p-4 sp">
+            <h1 class="text-3xl font-bold text-center mt-[-28] underline" data-lang="CERTIFICATE">CERTIFICATE</h1>
+            
+            <div class="flex">
+                <!-- Kolom Pertama -->
+                <div class="w-1/2 p-4 mt-12 border-box" style="height: 550px;">
+                    <div class="content h-full mr-4 ml-4 border-double border-4 border-back-500 bg-blue-600">
+                        <!-- Kolom Pertama: Header Title -->
+                        <p class="mt-2 pt-8 font-serif underline pl-2" data-lang="certificate1">Enthusiasm for learning</p>
+                        <h4 class="font-bold bg-white-600  p-2 indent-8"data-lang="certificate2">Web Developers, Coding Addicts, never forget to be grateful for their own abilities and always learn from everything...</h4>
+                    </div>
+                </div>   
+                <!-- Kolom Kedua: Carousel Gambar -->
+                <div class="w-1/2 p-4 mt-12 pl-2" style="height: 240px;">
+                    <div class="title-certificate h-full border-left border-solid border-2 border-back-500 shadow-xl overflow-auto touch-auto p-2 ">
+                        <!-- text run Logic Code Java Script -->
+                        <p class="text-white-600 my-2.5 font-mono italic text-1xl  " data-lang="certificate1per1">
+                            <span id="txt-run1"></span>
+                        </p>
+                        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                        <script>
+                            var typed = new Typed("#txt-run1", {
+                                strings: [
+                                    "As an active student, I take part in activities both to increase my experience and knowledge and just to take up my hobby to expand my relationships and train my soft skills"
+                                ],
+                                typeSpeed: 75,
+                                loop: true,
+                                backSpeed: 50,
+                                backDelay: 2000
+                            });
+                        </script>
+                    </div>
+                    <div class="relative h-full">
+                        <p class="font-bold underline decoration-double  text-1xl p-2" data-lang="certificate1per2">Certificate</p>
+                        <h5 class="text-1xl font-bold p-2" data-lang="certificate1per3"> 🥇 3+ Obtained</h5>
+                        <button id="prevBtn" aria-label="Previous" ></button>
+                        <div id="carousel" class="flex space-x-4 overflow-x-auto scroll-hidden h-full">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat1  ">
+                            <img src="img/certificate/sertifikat2.jpg" class="carousel-img" alt="sertifikat2  ">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat3  ">
+                            <img src="img/certificate/sertifikat2.jpg" class="carousel-img" alt="sertifikat4  ">
+                            <!-- <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat5  ">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat6  ">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat7  ">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat8  ">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat9  ">
+                            <img src="img/certificate/sertifikat1.jpg" class="carousel-img" alt="sertifikat10 "> -->
+                        </div>
+                        <button id="nextBtn" aria-label="Next" ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact" class="py-12 bg-gray-50 ">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center mb-8">
+            <h2 class="mb-2 text-3xl font-bold text-black " data-lang="Contact1">My contact</h2>
+            <p class="text-gray-600" data-lang="Contact2">Want to collaborate or have questions? Contact me via the form below:</p>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:space-x-4">
+            <div class="sm:w-1/2">
+                <div id="map" class="w-full h-64 border border-gray-300 rounded-lg shadow-md"></div>
+            </div>
+            <div class="mt-6 sm:w-1/2 sm:mt-0">
+                <form class="w-full max-w-lg" method="POST" action="backend.php">
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="name" data-lang="Contact3">Name</label>
+                        <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" type="text" id="name" name="name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="email" data-lang="Contact4">Email</label>
+                        <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700" for="message" data-lang="Contact5">Message</label>
+                        <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button class="px-4 py-2 text-white transition-colors bg-blue-500 rounded-md hover:bg-blue-600 transform hover:scale-105 duration-300" type="submit" data-lang="Contact6">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- script Key API maps -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC56v9F10HzQZzeYXP1ANS4oXvWYeJLgAQ&callback=initMap"></script>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-6">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="flex flex-col items-center">
+            <p class="mb-2 text-center" data-lang="Footer">© 2024 ALDO. All rights reserved.</p>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/profile.php?id=100064512853181&mibextid=ZbWKwL" class="text-white hover:text-gray-400">
+                    <i class="text-2xl bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/xip.aldo?igsh=YzAwZjE1ZTI0Zg==" class="text-white hover:text-gray-400">
+                    <i class="text-2xl bi bi-instagram"></i>
+                </a>
+                <a href="www.linkedin.com/in/
+                aldo-project-69358030a" class="text-white hover:text-gray-400">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://x.com/include365?t=7MiwGHnRuY9ft8yXsh7z9w&s=08" class="text-white hover:text-gray-400">
+                    <i class="text-2xl bi bi-twitter-x"></i>
+                </a>
+                <a href="https://www.youtube.com/@aldogaming5771" class="text-white hover:text-gray-400">
+                    <i class="text-2xl bi bi-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Home Button -->
+<a href="#Home" id="scrollToTopBtn" class="fixed z-50 p-2 text-white bg-gray-800 rounded-full bottom-4 right-4 hover:text-gray-400">
+    <i class="text-2xl bi bi-capslock-fill"></i>
+</a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

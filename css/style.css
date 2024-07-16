@@ -1,0 +1,176 @@
+//-----------------------------------------------------//
+//              Map Section
+//-----------------------------------------------------//
+#map {
+    height: 400px;
+}
+
+//-----------------------------------------------------//
+//              General Styles
+//-----------------------------------------------------//
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar title text */
+.navbar-title {
+    color: #000000; /* Warna hitam */
+}
+
+/* Light Mode Styles */
+.bg-light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.bg-light-mode .navbar {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.bg-light-mode .navbar-title {
+    color: #000000; /* Warna hitam */
+}
+
+/* Dark Mode Styles */
+.bg-dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.bg-dark-mode .navbar {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.bg-dark-mode .navbar-title {
+    color: #000000; /* Warna hitam */
+}
+
+/* Dark Mode Overlay */
+.dark-mode-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.dark-mode-active.active {
+    opacity: 1;
+}
+
+//-----------------------------------------------------//
+//              Skill Section
+//-----------------------------------------------------//
+.skill-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.skill:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+.skill-title, .skill-description {
+    transition: color 0.3s;
+}
+
+.bg-light-mode .skill-title, .bg-light-mode .skill-description {
+    color: #000000;
+}
+
+.bg-dark-mode .skill-title, .bg-dark-mode .skill-description {
+    color: #ffffff;
+}
+
+//-----------------------------------------------------//
+//              Work Experience Section
+//-----------------------------------------------------//
+.experience-header {
+    cursor: pointer;
+}
+
+.experience-content.hidden {
+    display: none;
+}
+
+//-----------------------------------------------------//
+//              Blog Section
+//-----------------------------------------------------//
+#ticker {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+}
+
+#ticker span {
+    display: inline-block;
+    white-space: pre;
+}
+
+//-----------------------------------------------------//
+//              About Section
+//-----------------------------------------------------//
+#about img {
+    transition: transform 0.3s ease-in-out;
+}
+
+#about img:hover {
+    transform: scale(1.05);
+}
+
+//-----------------------------------------------------//
+//              Certificate Section
+//-----------------------------------------------------//
+.border-box {
+    border: 2px solid #ccc; /* Warna dan ketebalan bingkai */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi transisi */
+    padding: 20px; /* Jarak dalam bingkai */
+}
+
+.border-box:hover {
+    transform: scale(1.05); /* Memperbesar bingkai saat di-hover */
+}
+
+.carousel-img {
+    width: calc(100% - 150px); /* Mengurangi total 40px untuk margin horizontal */
+    height: auto;
+    margin: 20px;
+}
+
+.certificate-img-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.certificate-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation: scrollImage 20s linear infinite;
+}
+
+@keyframes scrollImage {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+

@@ -47,11 +47,11 @@ if (carousel && prevBtn && nextBtn) {
     };
 
     prevBtn.addEventListener('click', () => {
-        carousel.scrollLeft -= 300;
+        carousel.scrollLeft -= 600;
     });
 
     nextBtn.addEventListener('click', () => {
-        carousel.scrollLeft += 300;
+        carousel.scrollLeft += 600;
     });
 
     setInterval(autoScroll, SCROLL_INTERVAL);

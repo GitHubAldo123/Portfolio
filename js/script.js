@@ -37,7 +37,7 @@ const nextBtn = document.getElementById('nextBtn');
 
 if (carousel && prevBtn && nextBtn) {
     const SCROLL_STEP = 1;
-    const SCROLL_INTERVAL = 25;
+    const SCROLL_INTERVAL = 20;
 
     const autoScroll = () => {
         carousel.scrollLeft += SCROLL_STEP;
@@ -47,11 +47,11 @@ if (carousel && prevBtn && nextBtn) {
     };
 
     prevBtn.addEventListener('click', () => {
-        carousel.scrollLeft -= 1000;
+        carousel.scrollLeft -= 200;
     });
 
     nextBtn.addEventListener('click', () => {
-        carousel.scrollLeft += 1000;
+        carousel.scrollLeft += 200;
     });
 
     setInterval(autoScroll, SCROLL_INTERVAL);

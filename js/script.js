@@ -37,12 +37,12 @@ const nextBtn = document.getElementById('nextBtn');
 
 if (carousel && prevBtn && nextBtn) {
     const SCROLL_STEP = 1;
-    const SCROLL_INTERVAL = 100;
+    const SCROLL_INTERVAL = 25;
 
     const autoScroll = () => {
         carousel.scrollLeft += SCROLL_STEP;
-        if (carousel.scrollLeft >= carousel.scrollWidth ) {
-            carousel.scrollLeft -= (carousel.scrollWidth );
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+            carousel.scrollLeft -= (carousel.scrollWidth / 2);
         }
     };
 

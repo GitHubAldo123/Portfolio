@@ -37,7 +37,7 @@ const nextBtn = document.getElementById('nextBtn');
 
 if (carousel && prevBtn && nextBtn) {
     const SCROLL_STEP = 1;
-    const SCROLL_INTERVAL = 20;
+    const SCROLL_INTERVAL = 100;
 
     const autoScroll = () => {
         carousel.scrollLeft += SCROLL_STEP;

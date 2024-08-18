@@ -39,17 +39,10 @@ if (carousel && prevBtn && nextBtn) {
     const SCROLL_STEP = 1;
     const SCROLL_INTERVAL = 20;
 
-    // Fungsi untuk menghitung lebar total dari elemen dalam carousel
-    const getTotalScrollWidth = () => {
-        return Array.from(carousel.children).reduce((acc, child) => acc + child.offsetWidth, 0);
-    };
-
     const autoScroll = () => {
         carousel.scrollLeft += SCROLL_STEP;
-        
-        // Cek apakah sudah mencapai akhir carousel
-        if (carousel.scrollLeft + carousel.offsetWidth >= getTotalScrollWidth()) {
-            carousel.scrollLeft = 0; // Reset scroll ke awal
+        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
+            carousel.scrollLeft -= (carousel.scrollWidth / 2);
         }
     };
 
@@ -63,7 +56,6 @@ if (carousel && prevBtn && nextBtn) {
 
     setInterval(autoScroll, SCROLL_INTERVAL);
 }
-
 
 //-----------------------------------------------------//
 //              Section Skill

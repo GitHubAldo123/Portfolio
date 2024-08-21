@@ -36,26 +36,27 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
 if (carousel && prevBtn && nextBtn) {
-    const SCROLL_STEP = 1;
-    const SCROLL_INTERVAL = 20;
+    const SCROLL_STEP = 1;  // Fine-tuned to a smaller step for smoother scrolling
+    const SCROLL_INTERVAL = 20; // 20ms interval for scroll effect
 
     const autoScroll = () => {
         carousel.scrollLeft += SCROLL_STEP;
-        if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
-            carousel.scrollLeft -= (carousel.scrollWidth / 2);
+        if (carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) {
+            carousel.scrollLeft = 0;  // Reset scroll position for continuous scrolling
         }
     };
 
     prevBtn.addEventListener('click', () => {
-        carousel.scrollLeft -= 200;
+        carousel.scrollLeft -= carousel.clientWidth; // Scroll by one "page"
     });
 
     nextBtn.addEventListener('click', () => {
-        carousel.scrollLeft += 200;
+        carousel.scrollLeft += carousel.clientWidth; // Scroll by one "page"
     });
 
     setInterval(autoScroll, SCROLL_INTERVAL);
 }
+
 
 //-----------------------------------------------------//
 //              Section Skill
